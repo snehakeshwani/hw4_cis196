@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  class: MyString
+  work: MyString
+  dueday: MyString
+
+two:
+  class: MyString
+  work: MyString
+  dueday: MyString
