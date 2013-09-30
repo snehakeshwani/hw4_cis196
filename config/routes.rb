@@ -1,6 +1,5 @@
 Myapp::Application.routes.draw do
-  get "tasks/new"
-  get "tasks/index"
+  resources :tasks
   get "landing_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
