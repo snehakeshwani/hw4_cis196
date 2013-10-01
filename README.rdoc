@@ -1,5 +1,7 @@
 == README
 
+http://pacific-ridge-7949.herokuapp.com/
+
 There are two tables in this project. One is for restaurants and their ratings and the other one is for keeping track of assignments and due dates. 
 
 Issues and fixes: 
