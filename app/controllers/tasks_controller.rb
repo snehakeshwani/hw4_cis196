@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def task_params
-      params.require(:task).permit(:work,:class,:dueday)
+      params.require(:task).permit(:work,:course,:dueday)
   end
   
   def new
