@@ -1,0 +1,13 @@
+<%= form_for(@part_list) do |f| %>
+<div class="field">
+    <p>part</p> 
+     <%= f.text_field :title%>
+</div>
+<div class="field">
+    <p>task</p> 
+     <%= f.collection_select :task, Task.all, :id, :course %>
+</div>
+<div class="actions">
+      <%= f.submit %>
+</div>
+<% end %>

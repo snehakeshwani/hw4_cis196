@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131001034329) do
+ActiveRecord::Schema.define(version: 20131006201038) do
+
+  create_table "part_lists", force: true do |t|
+    t.string   "title"
+    t.integer  "task_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "part_lists", ["task_id"], name: "index_part_lists_on_task_id"
 
   create_table "ratings", force: true do |t|
     t.string   "restaurant"
-    t.string   "cuising"
+    t.string   "cuisine"
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"
