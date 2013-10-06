@@ -1,2 +1,15 @@
-<h1>Gradings#index</h1>
-<p>Find me in app/views/gradings/index.html.erb</p>
+<table>
+<tr>
+<td >percent</td>
+<td >importance</td>
+<td >finalgrade</td>
+<td >task</td>
+
+</tr>
+<% @gradings.each do |grading| %>
+<tr>
+<td><%= grading.percent %></td>
+<td><%= grading.task.course %></td>
+</tr>
+<% end %>
+</table>

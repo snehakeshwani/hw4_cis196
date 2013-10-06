@@ -4,6 +4,7 @@ class GradingsController < ApplicationController
     end
   
   def index
+      @gradings = Grading.all
   end
 
   def new
