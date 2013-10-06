@@ -1,4 +1,5 @@
 Myapp::Application.routes.draw do
+  resources :gradings
   resources :tasks
   get "landing_pages/home"
   # The priority is based upon order of creation: first created -> highest priority.

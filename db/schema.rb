@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20131001034329) do
 
   create_table "ratings", force: true do |t|
     t.string   "restaurant"
-    t.string   "cuising"
+    t.string   "cuisine"
     t.integer  "rating"
     t.datetime "created_at"
     t.datetime "updated_at"

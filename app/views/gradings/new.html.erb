@@ -1,0 +1,22 @@
+<%= form_for(@grading) do |f| %>
+<div class="field">
+    <p>percent of grade</p> 
+    <%= f.text_field :percent%>
+    </div>
+    <div class="field">
+    <p>importance</p> 
+    <%= f.text_field :importance%>
+    </div>
+    <div class="field">
+    <p>final grade</p> 
+    <%= f.text_field :finalgrade%>
+    </div>
+<div class="field">
+    <p>task</p> 
+     <%= f.collection_select :task_id, Task.all, :id, :course%>
+
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

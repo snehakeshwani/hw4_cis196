@@ -1,3 +1,4 @@
+
 <table> 
   <tr> 
    <td>course</td> 
@@ -8,7 +9,13 @@
   <tr> 
    <td><%= task.course %></td> 
    <td><%= task.work %></td> 
-   <td><%= task.dueday %></td> 
+   <td><%= task.dueday %></td>
+
+   <td><%= link_to "show task", task_path(task.id) %> </td>
+   <td><%= link_to "edit task", edit_task_path(task.id) %> </td>
+   <td><%= link_to "destroy task", task, confirm: "you sure you want to do this?", method: :delete %> 
+</td>
+
   </tr> 
   <% end %> 
 </table> 
