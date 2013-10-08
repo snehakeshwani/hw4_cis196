@@ -1,4 +1,4 @@
 <div>
 	<h2><%= @part_list.title %></h2>
-	<p><%= @part_list.task %></p>
+	<p><%= @part_list.task.try(:course)%></p>
 </div>

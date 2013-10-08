@@ -1,9 +1,9 @@
 == README
 
-http://pacific-ridge-7949.herokuapp.com/
+http://mighty-savannah-4889.herokuapp.com/
 
-There are two tables in this project. One is for restaurants and their ratings and the other one is for keeping track of assignments and due dates. 
+The original table I created stored information about homework tasks, their course, and due day. The new table is for storing all the subparts of each homework. There is also a third table about restaurants and their ratings from last week's homework.
 
 Issues and fixes: 
 
-* new page would not work: I was using "class" as one of my field names which wouldn't load up the new page, changing it to "course" helped solve this
+* part_list.task.course wouldn't work, fixed by adding a try clause

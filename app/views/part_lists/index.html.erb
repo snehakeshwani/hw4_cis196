@@ -1,15 +1,15 @@
 <table>
 	<tr>
-		<td >title</td>
-		<td >task</td>
+		<td >Title</td>
+		<td >Task</td>
 	</tr>
 	<% @part_lists.each do |part_list| %>
 	<tr>
 		<td><%= part_list.title %></td>
-		<td><%= part_list.task %></td>
-		<td><%= link_to "show part", part_list_path(part_list.id) %></td>
-		<td><%= link_to "edit part", edit_part_list_path(part_list.id) %> </td>
-		<td><%= link_to "destroy parts", part_list,  method: :delete %> </td>
+		<td><%= part_list.task.try(:course) %></td>
+		<td><%= link_to "show subpart", part_list_path(part_list.id) %></td>
+		<td><%= link_to "edit subpart", edit_part_list_path(part_list.id) %> </td>
+		<td><%= link_to "destroy subpart", part_list,  method: :delete %> </td>
 
 	</tr>
 	<% end %>

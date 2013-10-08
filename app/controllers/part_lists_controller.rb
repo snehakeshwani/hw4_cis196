@@ -1,6 +1,6 @@
 class PartListsController < ApplicationController
     def part_lists_params
-        params.require(:part_list).permit(:title,:task_id)
+        params.require(:part_list).permit(:title,:task_id, :task)
     end
     
     def index
