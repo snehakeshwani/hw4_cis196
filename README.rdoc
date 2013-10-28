@@ -2,14 +2,5 @@
 
 http://mighty-savannah-4889.herokuapp.com/
 
-The original table I created stored information about homework tasks, their course, and due day. The new table is for storing all the subparts of each homework. There is also a third table about restaurants and their ratings from last week's homework.
+added omniauth-facebook to my app that allows you to sign in with facebook and view your own tasks. 
 
-Validations for tasks: 
-
-* work and course must be present
-* course must be between 5 and 7 characters long
-* course must contain letters or hyphens followed by digits
-
-Issues and fixes: 
-
-* part_list.task.course wouldn't work, fixed by adding a try clause
