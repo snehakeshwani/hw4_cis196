@@ -5,7 +5,7 @@
 </div>
 <div class="field">
     <p>task</p> 
-     <%= f.collection_select :task, Task.all, :id, :course %>
+     <%= f.collection_select :task_id, Task.all, :id, :course %>
 </div>
 <div class="actions">
       <%= f.submit %>
