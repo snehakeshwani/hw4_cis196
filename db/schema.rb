@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131006201038) do
+ActiveRecord::Schema.define(version: 20131028003210) do
 
   create_table "part_lists", force: true do |t|
     t.string   "title"
@@ -34,6 +34,19 @@ ActiveRecord::Schema.define(version: 20131006201038) do
     t.string   "course"
     t.string   "work"
     t.string   "dueday"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"
+
+  create_table "users", force: true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

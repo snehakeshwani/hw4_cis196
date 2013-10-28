@@ -1,10 +1,19 @@
 class TasksController < ApplicationController
   def task_params
-      params.require(:task).permit(:work,:course,:dueday)
+      params.require(:task).permit(:work,:course,:dueday,:user_id)
   end
   
   def show
-      @task = Task.find(params[:id])
+    @task = Task.find(params[:id])
+    if current_user != nil
+      if (@task.user_id == current_user.id)
+        @name = current_user.name
+      else
+        @name = "can't show username due to privacy concerns"
+      end
+    else
+      @name = "can't show username due to privacy concerns"
+    end
   end
   
   def edit
@@ -16,9 +25,13 @@ class TasksController < ApplicationController
   end
 
   def index
+    if current_user
+      @tasks = Task.where(user_id: current_user)
+    else
       @tasks=Task.all
+    end
   end
-  
+
   def update
       @task = Task.find(params[:id])
       if @task.update_attributes(task_params)
@@ -33,14 +46,13 @@ class TasksController < ApplicationController
       @task.destroy
       redirect_to tasks_path
   end
-
   
   def create
-      @task = Task.new(task_params)
+    @task = Task.new(task_params)
       if @task.save
-          redirect_to tasks_path
+        redirect_to tasks_path
       else
-          render 'new'
+        render 'new'
       end
   end
 end

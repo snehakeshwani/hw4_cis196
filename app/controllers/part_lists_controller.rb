@@ -22,7 +22,7 @@ class PartListsController < ApplicationController
     
     def update
         @part_list = PartList.find(params[:id])
-        if @part_list.update_attributes(params[:user])
+        if @part_list.update_attributes(params[:task])
             redirect_to part_list_path(@part_list.id)
             else
             render 'edit'
