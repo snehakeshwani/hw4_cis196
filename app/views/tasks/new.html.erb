@@ -1,33 +1,33 @@
 <%= form_for(@task) do |f| %> 
 	<div class="field"> 
-      <p>course</p>  
-      <%= f.text_field :course%> 
-  	</div> 
-   	<div class="field"> 
-      <p>work</p>  
-      <%= f.text_field :work%> 
-    </div> 
-    <div class="field"> 
-      <p>due day</p>  
-      <%= f.text_field :dueday%> 
-    </div>
-    <div class="field">
+    <p>course</p>  
+    <%= f.text_field :course%> 
+  </div> 
+  <div class="field"> 
+    <p>work</p>  
+    <%= f.text_field :work%> 
+  </div> 
+  <div class="field"> 
+    <p>due day</p>  
+    <%= f.text_field :dueday%> 
+  </div>
+  <div class="field">
     <p>user</p> 
-     <%= f.collection_select :user_id, User.all, :id, :name %>
-    </div> 
-    <div class="actions"> 
-      <%= f.submit %> 
-    </div>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+  </div> 
 
-    <div class="error-msg">
+  <div class="actions"> 
+    <%= f.submit %> 
+  </div>
+
+  <div class="error-msg">
     <% if @task.errors.any? %>
       <ul>
       <% @task.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+    <% end %>
       </ul>
-    </div>
-    <%end%>
   </div>
+    <%end%>
 
 <% end %> 
