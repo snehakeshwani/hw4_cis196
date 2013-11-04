@@ -2,5 +2,5 @@
 
 http://mighty-savannah-4889.herokuapp.com/
 
-added omniauth-facebook to my app that allows you to sign in with facebook and view your own tasks. 
+Added sendgrid to my app and added another field to my tasks table. I added an email field so that the user can specify who he/she sends out the email to. I couldn't directly email the user because I didn't use devise for my login (I used omniauth-facebook instead). 
 
