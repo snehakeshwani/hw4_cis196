@@ -10,6 +10,6 @@ class Notifications < ActionMailer::Base
     @greeting = "Hi"
     @id = task.id
 
-    mail to: "snehakeshwani@gmail.com"
+    mail to: task.email
   end
 end

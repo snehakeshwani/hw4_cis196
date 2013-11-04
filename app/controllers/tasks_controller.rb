@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   def task_params
-      params.require(:task).permit(:work,:course,:dueday,:user_id)
+      params.require(:task).permit(:work,:course,:dueday, :email, :user_id)
   end
   
   def show

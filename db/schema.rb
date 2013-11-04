@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028003210) do
+ActiveRecord::Schema.define(version: 20131104193311) do
 
   create_table "part_lists", force: true do |t|
     t.string   "title"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20131028003210) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "email"
   end
 
   add_index "tasks", ["user_id"], name: "index_tasks_on_user_id"

@@ -11,6 +11,10 @@
     <p>due day</p>  
     <%= f.text_field :dueday%> 
   </div>
+    <div class="field"> 
+    <p>enter email to notify:</p>  
+    <%= f.text_field :email%> 
+  </div>
   <div class="field">
     <p>user</p> 
     <%= f.collection_select :user_id, User.all, :id, :name %>
