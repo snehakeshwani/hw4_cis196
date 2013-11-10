@@ -2,5 +2,5 @@
 
 http://mighty-savannah-4889.herokuapp.com/
 
-Added sendgrid to my app and added another field to my tasks table. I added an email field so that the user can specify who he/she sends out the email to. I couldn't directly email the user because I didn't use devise for my login (I used omniauth-facebook instead). 
+Added two more fields to my app: prioirity and completed. Added scope for each of those. 
 
