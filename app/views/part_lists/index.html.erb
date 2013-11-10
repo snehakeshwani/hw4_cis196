@@ -45,16 +45,4 @@
 	</tr>
 	<% end %>
 
-	<% @part_lists.other.each do |part_list| %>
-	<tr>
-		<td><%= part_list.title %></td>
-		<td><%= part_list.complete %></td>
-		<td><%= part_list.priority %></td>
-		<td><%= part_list.task.try(:course) %></td>
-		<td><%= link_to "show subpart", part_list_path(part_list.id) %></td>
-		<td><%= link_to "edit subpart", edit_part_list_path(part_list.id) %> </td>
-		<td><%= link_to "destroy subpart", part_list,  method: :delete %> </td>
-
-	</tr>
-	<% end %>
 </table>
