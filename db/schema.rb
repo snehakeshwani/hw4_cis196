@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131104193311) do
+ActiveRecord::Schema.define(version: 20131110215926) do
 
   create_table "part_lists", force: true do |t|
     t.string   "title"
     t.integer  "task_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "complete"
+    t.string   "priority"
   end
 
   add_index "part_lists", ["task_id"], name: "index_part_lists_on_task_id"

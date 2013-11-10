@@ -4,8 +4,20 @@
      <%= f.text_field :title%>
 </div>
 <div class="field">
+    <p>complete?</p> 
+     <%= f.check_box :complete%>
+</div>
+<div class="field">
     <p>task</p> 
-     <%= f.collection_select :task_id, Task.all, :id, :course %>
+    <% if current_user %>
+    	<%= f.collection_select :task_id, Task.where(user_id: current_user), :id, :course %>
+    <%else %>
+    	<%= f.collection_select :task_id, Task.all, :id, :course %>
+   	<% end %>
+</div>
+<div class="field">
+    <p>priority</p>
+    <%= f.select(:priority, options_for_select([['high', 'high'], ['medium', 'medium'], ['low', 'low']], 3)) %>
 </div>
 <div class="actions">
       <%= f.submit %>
