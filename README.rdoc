@@ -2,5 +2,4 @@
 
 http://mighty-savannah-4889.herokuapp.com/
 
-Added two more fields to my app: prioirity and completed. Added scope for each of those. 
-
+Added select/deselect functionality for partlists and show/hide functionality for the title of the partlist page
