@@ -8,14 +8,15 @@ $(function(){
     	}
 	});
 
-   	$("#title").click(function(){
-                $("#title").hide();
-                $("#unhide").css("visibility", "visible");
-   	});
-
    	$("#unhide").click(function(){
+   		if ($(this).text()=="Click to hide title"){
+                $("#title").hide();
+                $("#unhide").text("Click to show title");
+        }
+        else{
                 $("#title").show();
-                $("#unhide").css("visibility", "hidden");
+                $("#unhide").text("Click to hide title");
+        }
    	});
 
 });
