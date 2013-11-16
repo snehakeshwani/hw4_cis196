@@ -9,7 +9,7 @@ class PartListsController < ApplicationController
             @message = ""
         else
             @part_lists = []
-            @message = "can't view/add parts unless signed in"
+            @message = "Can't view/add parts unless signed in"
         end
     end
 
@@ -26,7 +26,7 @@ class PartListsController < ApplicationController
                 render 'new'
             end
         else
-            @message = "can't view/add parts unless signed in"
+            @message = "Can't view/add parts unless signed in"
             redirect_to part_lists_path
         end
     end

@@ -1,11 +1,14 @@
-	<p><%= @message %></p>
-<table>
+</br>
+<h1 id="title">Partlist</h1>
+<a id = "unhide">Show Title</a>
+<table id = "tbl">
 	<tr>
 		<td >Title</td>
 		<td >Complete?</td>
 		<td >Priority</td>
 		<td >Task</td>
 	</tr>
+	<% if @part_lists !=[] %>
 	<% @part_lists.high_priority.each do |part_list| %>
 	<tr>
 		<td><%= part_list.title %></td>
@@ -33,7 +36,7 @@
 	<% end %>
 
 	<% @part_lists.low_priority.each do |part_list| %>
-	<tr>
+	<tr >
 		<td><%= part_list.title %></td>
 		<td><%= part_list.complete %></td>
 		<td><%= part_list.priority %></td>
@@ -44,5 +47,6 @@
 
 	</tr>
 	<% end %>
-
+	<%end%>
+	<p id = message><%= @message %></p>
 </table>
