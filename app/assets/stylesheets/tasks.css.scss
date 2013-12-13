@@ -61,3 +61,19 @@ h1{
 #message{
 	color: red;
 }
+
+.formtastic ul, .formtastic ol {
+	list-style: none;
+}
+
+.task-frm li{
+	list-style-type: none;
+}
+
+.formtastic input{
+	height: 30px;
+}
+
+#slt{
+	padding-left: 25px;
+}

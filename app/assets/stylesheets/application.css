@@ -11,9 +11,12 @@
  *= require_self
  *= require_tree .
  */
+*= require formtastic
+*= require my_formtastic_changes
+ *= require bootstrap-without-forms
+ *= require formtastic-plus-bootstrap
 
 #user-widget {
-	text-align: right;
 	padding-right: 20px;
 	padding-top: 20px;
 }

@@ -1,35 +1,15 @@
-<%= form_for(@task) do |f| %>
-<div class="field">
-    <p>course</p> 
-     <%= f.text_field :course%>
-    </div>
-    <div class="field">
-    <p>work</p> 
-     <%= f.text_field :work%>
-    </div>
-    <div class="field">
-    <p>due day</p> 
-     <%= f.text_field :dueday%>
-    </div>
-    <div class="field">
-    <p>enter email to notify:</p> 
-     <%= f.text_field :email%>
-    </div>
-      <div class="field">
-    <p>user</p> 
-     <%= f.collection_select :user_id, User.all, :id, :name %>
-    </div>
-    <div class="actions">
-      <%= f.submit :class => "btn btn-lg btn-primary"%>
-    </div>
-    <div class="error-msg">
-    <% if @task.errors.any? %>
-      <ul>
-      <% @task.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-    <% end %>
-    </div>
-<% end %>
+
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Rum+Raisin' rel='stylesheet' type='text/css'>
+</head>
+<h1>Edit an Existing Task</h1>
+
+<div class="task-frm">
+<%= semantic_form_for @task do |f| %> 
+<%= f.inputs :course, :work, :dueday , :email %>
+<div id = "slt"><%= f.input :user_id ,  :as => :select, :collection => User.all, :include_blank => false %></div>
+</br>
+<%= f.submit :class => "btn btn-lg btn-primary" %> 
+
+<% end %> 
+</div>

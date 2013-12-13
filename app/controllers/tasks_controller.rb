@@ -3,6 +3,7 @@ class TasksController < ApplicationController
       params.require(:task).permit(:work,:course,:dueday, :email, :user_id)
   end
   
+
   def show
     @task = Task.find(params[:id])
     if current_user != nil

@@ -20,7 +20,9 @@ end
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
-gem 'swiftype', '~> 1.0.0'
+# Formtastic
+gem "formtastic", "~> 2.2.1"
+gem "formtastic-plus-bootstrap"
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
