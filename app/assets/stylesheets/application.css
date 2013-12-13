@@ -12,7 +12,6 @@
  *= require_tree .
 
 *= require formtastic
-*= require my_formtastic_changes
 *= require bootstrap-without-forms
 *= require formtastic-plus-bootstrap
  */
