@@ -1,3 +1,63 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#tbl-tasks td{
+	border: 0px dashed;
+	text-align: center;
+}
+
+.container {
+	background-color: #000000;
+	color: #FFFFFF;
+	border: 20px solid transparent;
+	border-bottom: 35px solid transparent;
+	border-top: 25px solid transparent;
+	border-image: url(blackboard.png) 40 30 stretch;
+}
+
+#frm {
+	width:30%;
+}
+
+h1{
+	font-family: 'Rum Raisin', sans-serif;
+}
+
+#crs, #due, #wrk{
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 25px;
+}
+
+#title{
+
+	font-size: 45px;	
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.unhighlight {
+    background-color: white;
+}
+
+#unhide{
+
+}
+
+#show-tsk{
+	text-align: center;
+	background-image: url('sticky-note.jpeg');
+	height: 325px;
+	width: 305px;
+}
+
+#show-contents{
+	padding-top: 70px;
+	width: 95%;
+}
+
+#message{
+	color: red;
+}

@@ -1,5 +1,5 @@
 $(function(){
-    $('#tbl-tasks tr').click(function() {
+    $('#tbl tr').click(function() {
 		if($(this).hasClass("highlight")) {
 			$(this).removeClass("highlight");
 		}

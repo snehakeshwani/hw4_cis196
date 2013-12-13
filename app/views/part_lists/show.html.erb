@@ -1,6 +1,9 @@
-<div>
-	<h2><%= @part_list.title %></h2>
+<div id = "show-tsk">
+	<div id = "show-contents">
+
+	<h1><%= @part_list.title %></h2>
 	<p><%= @part_list.complete %></p>
 	<p><%= @part_list.priority %></p>
 	<p><%= @part_list.task.try(:course)%></p>
+</div>
 </div>

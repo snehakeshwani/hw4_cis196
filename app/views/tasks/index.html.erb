@@ -1,8 +1,17 @@
-<table> 
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+</head>
+</br>
+
+
+<div class="container">
+  <h1 id="title">Upcoming Tasks</h1>
+  <a id = "unhide">Click to hide title</a>
+<table class = "table table-borderless" id ="tbl-tasks"> 
   <tr> 
-   <td>Course</td> 
-   <td>Work</td> 
-   <td>Due Day</td> 
+   <td id = "crs"><b>Course</td> 
+   <td id = "wrk"><b>Work</td> 
+   <td id = "due"><b>Due Day</td> 
   </tr> 
   <% @tasks.each do |task| %> 
   <tr> 
@@ -15,3 +24,4 @@
   </tr> 
   <% end %> 
 </table> 
+</div>
