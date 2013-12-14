@@ -2,4 +2,17 @@
 
 http://mighty-savannah-4889.herokuapp.com/
 
-Added select/deselect functionality for partlists and show/hide functionality for the title of the partlist page
+This app acts as a to-do list for school work! It also allows users to add subparts to their tasks. The specific functionality of this app is as follows: 
+
+1) gems: Gems used in this app are omniauth-facebook (http://rubydoc.info/gems/omniauth-facebook/1.5.1/frames), bootstrap (http://rubydoc.info/gems/bootstrap-sass/3.0.3.0/frames), formtastic (http://rubydoc.info/gems/formtastic/2.2.1/frames) and formtastic-bootstrap (http://rubydoc.info/gems/formtastic-bootstrap/2.1.3/frames). This allows for creation of cool forms with shorter syntax as seen on the create task page. 
+
+2) heroku addon: Sendgrid (https://devcenter.heroku.com/articles/sendgrid) is used to send an email after each task is added
+
+3) database/structures: This app has three databases: users, tasks (belongs_to user), part_lists (belongs_to tasks). 
+
+4) validations: this app validates for email format, presence of important fields, course format
+
+5) scopes: this app adds scope for the priorities of the subparts such that high priority tasks are at the top of the index, followed by medium and low priorities. 
+
+6) javascript/jquery: this is used in the index pages such that different rows can be highlighted and the title can be hidden and made visible. 
+
