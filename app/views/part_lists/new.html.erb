@@ -1,3 +1,8 @@
+<head>
+  <link href='http://fonts.googleapis.com/css?family=Rum+Raisin' rel='stylesheet' type='text/css'>
+</head>
+<h1>Create a New Subpart</h1>
+
 <%= form_for(@part_list) do |f| %>
   <div class="field">
     <p>title</p> 
@@ -5,7 +10,11 @@
   </div>
   <div class="field">
     <p>complete?</p> 
+    <div class="checkbox">
+      <label>
     <%= f.check_box :complete%>
+      </label>
+  </div>
   </div>
   <div class="field">
     <p>task</p> 
@@ -23,3 +32,6 @@
       <%= f.submit :class => "btn btn-lg btn-primary"%>
   </div>
 <% end %>
+
+
+
